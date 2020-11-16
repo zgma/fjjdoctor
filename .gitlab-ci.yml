@@ -1,0 +1,16 @@
+before_script:
+  - git submodule sync --recursive
+  - git submodule update --init --recursive
+  
+
+stages:
+  - build
+  - test
+
+
+build:
+  stage: build
+  script:
+    - ./.ci_tools/build.sh
+  tags:
+    - nim-runner

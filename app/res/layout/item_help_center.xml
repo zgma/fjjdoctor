@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/layout_user_name"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/mine_menu_item_height"
+        android:background="@color/white"
+        >
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:text=""
+            android:textColor="@color/action_bar_title_text"
+            android:textSize="16sp"
+            />
+
+        <ImageView
+            android:id="@+id/arrow_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:src="@mipmap/arrow_right"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            />
+
+
+        <TextView
+            android:id="@+id/tv_user_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="爱喝雪碧的猫"
+            android:textColor="@color/user_menu_memo"
+            android:textSize="16sp"
+            android:layout_toLeftOf="@+id/arrow_2"
+            android:visibility="gone"
+            />
+
+    </RelativeLayout>
+
+</LinearLayout>

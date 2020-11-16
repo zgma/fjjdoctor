@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/bri_send"
+        android:layout_width="220dp"
+        android:layout_height="85dp"
+        android:visibility="gone"
+        android:background="@drawable/transfer_send_bg">
+
+        <ImageView
+            android:id="@+id/iv_icon_send"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/transfer_icon_normal"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="8dp"
+            />
+
+        <TextView
+            android:id="@+id/tv_bri_mess_send"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="8dp"
+            android:gravity="center|left"
+            android:singleLine="true"
+            android:text="恭喜发财，大吉大利"
+            android:textColor="@color/white"
+            android:layout_toRightOf="@+id/iv_icon_send"
+            android:textSize="14sp"/>
+
+        <TextView
+            android:id="@+id/tv_bri_target_send"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="30dp"
+            android:gravity="center|left"
+            android:text="@string/check_rp"
+            android:textColor="@color/white"
+            android:layout_toRightOf="@+id/iv_icon_send"
+            android:textSize="11sp"/>
+
+        <TextView
+            android:id="@+id/tv_bri_name_send"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="8dip"
+            android:gravity="center|left"
+            android:paddingLeft="10dp"
+            android:text="@string/red_packet"
+            android:textColor="@color/color_999"
+            android:textSize="10sp"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/bri_rev"
+        android:layout_width="220dp"
+        android:layout_height="85dp"
+        android:background="@drawable/transfer_rev_bg">
+
+        <ImageView
+            android:id="@+id/iv_icon_rev"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/transfer_icon_normal"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="8dp"
+            />
+
+
+        <TextView
+            android:id="@+id/tv_bri_mess_rev"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="8dp"
+            android:gravity="center|left"
+            android:singleLine="true"
+            android:text="恭喜发财，大吉大利"
+            android:textColor="@color/white"
+            android:layout_toRightOf="@+id/iv_icon_rev"
+            android:textSize="14sp"/>
+        <TextView
+            android:id="@+id/tv_bri_target_rev"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="30dp"
+            android:gravity="center|left"
+            android:text="@string/open_rp"
+            android:textColor="@color/white"
+            android:layout_toRightOf="@+id/iv_icon_rev"
+
+            android:textSize="11sp"/>
+        <TextView
+            android:id="@+id/tv_bri_name_rev"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="8dip"
+            android:gravity="center|left"
+            android:paddingLeft="14dp"
+            android:text="@string/red_packet"
+            android:textColor="@color/color_999"
+            android:textSize="10sp"/>
+    </RelativeLayout>
+
+</FrameLayout>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        app:elevation="0dp">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:titleTextAppearance="@style/Toolbar.TitleText"></androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <!--<androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="10dp"
+        android:cacheColorHint="@android:color/transparent"
+        android:layout_below="@+id/app_bar_layout"
+        />-->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/app_bar_layout"
+        android:layout_marginBottom="10dp"
+        >
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <com.netease.nim.uikit.common.ui.pinyin.CharIndexView
+            android:id="@+id/iv_main"
+            android:layout_width="20dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            app:indexTextSize="13sp"
+            app:charTextColor="#999999"
+            app:indexTextColor="#000000"
+            android:paddingVertical="5dp"
+            />
+
+        <TextView android:id="@+id/tv_index"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_centerInParent="true"
+            android:visibility="invisible"
+            android:text="@string/empty"
+            android:textColor="@color/white"
+            android:textSize="40.0dip"
+            android:gravity="center"
+            android:background="@drawable/nim_contact_hit_letter_bg"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/emptyBg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="@dimen/dp_size_50"
+        android:contentDescription="@string/empty"
+        android:drawableTop="@drawable/nim_messages_list_empty_bg"
+        android:lineSpacingExtra="@dimen/dp_size_5"
+        android:text="还没有会话，在通讯录中找个人聊聊吧！"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        />
+
+
+</RelativeLayout>

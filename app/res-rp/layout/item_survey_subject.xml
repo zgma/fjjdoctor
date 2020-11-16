@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:leon="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:gravity="center">
+
+    <com.leon.lib.settingview.LSettingItem
+        android:id="@+id/item_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        leon:LtextColor="@color/grey"
+        leon:isShowRightText="true"
+        leon:leftIcon="@mipmap/item_delete"
+        leon:leftText=""
+        leon:rightStyle="iconHide"
+        leon:rightText="编辑"
+        leon:rightTextColor="@color/color_blue_0888ff" />
+
+</RelativeLayout>

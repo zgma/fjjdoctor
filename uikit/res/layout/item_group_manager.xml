@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/listItemLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/nim_contact_list_item_selecter"
+    android:minHeight="60dp"
+    android:orientation="vertical" >
+
+    <ImageView
+        android:id="@+id/img_delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/admin_delete"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="20dp"
+        android:visibility="gone"
+        />
+
+
+    <com.netease.nim.uikit.common.ui.imageview.HeadImageView
+        android:id="@+id/img_head"
+        android:layout_width="@dimen/avatar_size_in_contact"
+        android:layout_height="@dimen/avatar_size_in_contact"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="20dp"
+        android:layout_toRightOf="@+id/img_delete"
+
+        />
+
+    <RelativeLayout
+        android:id="@+id/name_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="20dip"
+        android:layout_toRightOf="@+id/img_head"
+        android:gravity="center_vertical" >
+
+        <TextView
+            android:id="@+id/tv_nickname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawablePadding="4dip"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="@string/empty"
+            android:textColor="#333333"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+
+    <ImageView
+        android:id="@+id/img_mute"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/nim_team_member_delete_normal"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:visibility="visible"
+        />
+
+
+    <View
+        android:id="@+id/bottomLine"
+        style="@style/horizontal_light_thin_divider"
+        android:layout_alignLeft="@+id/name_layout"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="20dp"
+        android:visibility="gone"
+        />
+
+
+
+</RelativeLayout>

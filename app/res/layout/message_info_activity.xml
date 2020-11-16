@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        app:elevation="0dp">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:titleTextAppearance="@style/Toolbar.TitleText" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="20dp"
+        android:visibility="gone">
+
+        <include
+            android:id="@+id/user_layout"
+            layout="@layout/nim_team_member_item" />
+
+        <include
+            android:id="@+id/create_team_layout"
+            layout="@layout/nim_team_member_item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <View
+        style="@style/horizontal_light_thin_divider"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/layout_userInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="69dp"
+            android:layout_below="@+id/action_bar"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp">
+
+            <ImageView
+                android:id="@+id/iv_my_code"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="0dp"
+                android:src="@mipmap/arrow_right" />
+
+            <LinearLayout
+                android:id="@+id/layout_user_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/user_photo"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_user_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+
+
+            <com.netease.nim.uikit.common.ui.imageview.HeadImageView
+                android:id="@+id/user_photo"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginVertical="16dp" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/common_bg" />
+
+        <RelativeLayout
+            android:id="@+id/layout_search_history"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/isetting_item_height"
+            android:background="@color/white">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:text="查找聊天记录"
+                android:textColor="@color/action_bar_title_text"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/arrow_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:src="@mipmap/arrow_right" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/common_bg" />
+
+        <include
+            android:id="@+id/toggle_layout2"
+            layout="@layout/nim_user_profile_toggle_item" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2px"
+            android:layout_alignParentBottom="true"
+            android:background="@color/common_bg" />
+
+        <include
+            android:id="@+id/toggle_layout4"
+            layout="@layout/nim_user_profile_toggle_item" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2px"
+            android:layout_alignParentBottom="true"
+            android:background="@color/common_bg" />
+
+        <include
+            android:id="@+id/screen_shot_layout"
+            layout="@layout/nim_user_profile_toggle_item" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2px"
+            android:layout_alignParentBottom="true"
+            android:background="@color/common_bg" />
+
+
+        <RelativeLayout
+            android:id="@+id/layout_clear_history"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/isetting_item_height"
+            android:background="@color/white">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:text="清除聊天记录"
+                android:textColor="@color/action_bar_title_text"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/arrow_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:src="@mipmap/arrow_right" />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/layout_alias"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/isetting_item_height"
+            android:background="@color/white"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:text="设置备注"
+                android:textColor="@color/action_bar_title_text"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/arrow_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:src="@mipmap/arrow_right" />
+
+
+            <TextView
+                android:id="@+id/tv_alias"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/arrow_1"
+                android:text="12399523"
+                android:textColor="@color/user_menu_memo"
+                android:textSize="16sp" />
+
+        </RelativeLayout>
+
+        <include
+            android:id="@+id/toggle_layout"
+            layout="@layout/nim_user_profile_toggle_item"
+            android:visibility="gone" />
+
+        <include
+            android:id="@+id/toggle_layout3"
+            layout="@layout/nim_user_profile_toggle_item"
+            android:visibility="gone" />
+
+
+        <RelativeLayout
+            android:id="@+id/layout_report"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/isetting_item_height"
+            android:background="@color/white">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:text="投诉举报"
+                android:textColor="@color/action_bar_title_text"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/arrow_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:src="@mipmap/arrow_right" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

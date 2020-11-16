@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@+id/rlRoot"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/app_bar_layout"
+        android:layout_marginBottom="10dp"
+        >
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="-20dp"
+            />
+
+        <com.netease.nim.uikit.common.ui.pinyin.CharIndexView
+            android:id="@+id/iv_main"
+            android:layout_width="20dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            app:indexTextSize="13sp"
+            app:charTextColor="#999999"
+            app:indexTextColor="#000000"
+            android:paddingVertical="5dp"
+            />
+
+        <TextView android:id="@+id/tv_index"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_centerInParent="true"
+            android:visibility="invisible"
+            android:text="@string/empty"
+            android:textColor="@color/white"
+            android:textSize="40.0dip"
+            android:gravity="center"
+            android:background="@drawable/nim_contact_hit_letter_bg"/>
+
+    </RelativeLayout>
+
+    <include
+        android:id="@+id/contact_loading_frame"
+        layout="@layout/nim_contact_loading_frame"
+        android:visibility="gone"/>
+
+</RelativeLayout>

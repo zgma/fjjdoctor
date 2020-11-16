@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <View
+        android:id="@+id/action_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="1dp" />
+
+    <com.qingeng.fjjdoctor.widget.TopBar
+        android:id="@+id/top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </com.qingeng.fjjdoctor.widget.TopBar>
+
+
+    <LinearLayout
+        android:id="@+id/layout_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/top_bar"
+        android:layout_marginHorizontal="@dimen/common_margin_20"
+        android:layout_marginTop="100dp"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_login_input"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+
+            <EditText
+                android:id="@+id/edit_old_code"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@null"
+                android:drawablePadding="15dp"
+                android:hint="短信动态码"
+                android:inputType="number"
+                android:longClickable="false"
+                android:paddingVertical="10dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:textCursorDrawable="@null"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tv_code_send_old"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:text="@string/register_hint_send_code" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/layout_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/top_bar"
+        android:layout_marginHorizontal="@dimen/common_margin_20"
+        android:layout_marginTop="100dp"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <EditText
+            android:id="@+id/edit_new_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_login_input"
+            android:drawablePadding="15dp"
+            android:hint="输入新手机号"
+            android:inputType="phone"
+            android:paddingVertical="10dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:textColor="@color/text_color_grey"
+            android:textCursorDrawable="@null"
+            android:textSize="15sp" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/bg_login_input"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+
+            <EditText
+                android:id="@+id/edit_new_code"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@null"
+                android:drawablePadding="15dp"
+                android:hint="短信动态码"
+                android:inputType="number"
+                android:longClickable="false"
+                android:paddingVertical="10dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:textCursorDrawable="@null"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tv_send_code_new"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:text="@string/register_hint_send_code" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_next"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_button_height"
+        android:layout_below="@+id/login_layout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginHorizontal="@dimen/common_margin_20"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/bg_login_button"
+        android:text="下一步设置新密码"
+        android:textColor="@color/white" />
+
+
+</LinearLayout>

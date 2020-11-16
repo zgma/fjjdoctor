@@ -1,0 +1,8 @@
+include ':uikit', ':apilibrary', ':zxing' ,':lsettingviewlibrary', ':calendarview'
+include ':app'
+
+//include ':faceunity'
+//include ':jrmfRpWalletlib'
+//include ':avchatkit'
+//include ':rtskit'
+project(':zxing').projectDir = new File('simplezxing')

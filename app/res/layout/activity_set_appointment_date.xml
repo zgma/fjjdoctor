@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:leon="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_bg"
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        app:elevation="0dp">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:titleTextAppearance="@style/Toolbar.TitleText"></androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <com.haibin.calendarview.CalendarLayout
+        android:id="@+id/calendarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#fff"
+        android:orientation="vertical"
+        app:calendar_content_view_id="@+id/cl_time">
+
+        <com.haibin.calendarview.CalendarView
+            android:id="@+id/calendarView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#fff"
+            app:calendar_padding="10dp"
+            app:current_month_lunar_text_color="#CFCFCF"
+            app:current_month_text_color="#333333"
+            app:max_multi_select_size="1000"
+            app:max_year="2030"
+            app:min_year="2004"
+            app:month_view="com.qingeng.fjjdoctor.user.appointment.multi.CustomMultiMonthView"
+            app:month_view_show_mode="mode_only_current"
+            app:other_month_lunar_text_color="#e1e1e1"
+            app:other_month_text_color="#e1e1e1"
+            app:scheme_text="假"
+            app:scheme_text_color="#333"
+            app:scheme_theme_color="#128c4b"
+            app:select_mode="multi_mode"
+            app:selected_lunar_text_color="#CFCFCF"
+            app:selected_text_color="#ffffff"
+            app:selected_theme_color="#f17706"
+            app:week_background="#fff"
+            app:week_start_with="sun"
+            app:week_text_color="#111111"
+            app:week_view="com.qingeng.fjjdoctor.user.appointment.multi.CustomMultiWeekView"
+            app:week_view_scrollable="true"
+            app:year_view_day_text_color="#333333"
+            app:year_view_day_text_size="9sp"
+            app:year_view_month_text_color="#ff0000"
+            app:year_view_month_text_size="20sp"
+            app:year_view_scheme_color="#f17706" />
+
+
+        <LinearLayout
+            android:id="@+id/cl_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="@color/common_bg" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginVertical="15dp"
+                android:text="设置时间"
+                android:textColor="@color/grey" />
+
+            <com.leon.lib.settingview.LSettingItem
+                android:id="@+id/item_set_am"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                leon:LtextColor="@color/action_bar_title_text"
+                leon:isShowRightText="true"
+                leon:leftText="上午" />
+
+            <com.leon.lib.settingview.LSettingItem
+                android:id="@+id/item_set_pm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                leon:LtextColor="@color/action_bar_title_text"
+                leon:isShowUnderLine="false"
+                leon:isShowRightText="true"
+                leon:leftText="下午" />
+
+
+            <Button
+                android:id="@+id/btn_save"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/common_button_height"
+                android:layout_below="@+id/login_layout"
+                android:layout_centerHorizontal="true"
+                android:layout_marginHorizontal="32dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/bg_comm_button_90"
+                android:text="确认"
+                android:textColor="@color/white" />
+
+
+        </LinearLayout>
+
+    </com.haibin.calendarview.CalendarLayout>
+
+
+
+
+</LinearLayout>

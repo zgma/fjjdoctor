@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:background="@drawable/background_tab">
+
+
+
+    <View
+        android:id="@+id/position"
+        android:layout_width="5dp"
+        android:layout_height="5dp"
+        android:background="@color/transparent"
+        android:layout_toRightOf="@+id/tab_title_icon"
+        android:layout_marginLeft="-20dp"
+        />
+
+    <TextView
+        android:id="@+id/tab_title_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1111111111"
+        android:textColor="@color/action_bar_tittle_color_555555"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:autoSizeMaxTextSize="5dp"
+        android:layout_marginBottom="3dp"
+        android:layout_marginTop="1dp"
+        android:textSize="12sp" />
+
+    <ImageView
+        android:id="@+id/tab_title_icon"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@+id/tab_title_label"
+        />
+
+
+
+    <ImageView
+        android:id="@+id/tab_new_indicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:contentDescription="@string/empty"
+        android:src="@drawable/nim_main_tab_new_message_notify"
+        android:visibility="gone" />
+
+    <com.netease.nim.uikit.common.ui.drop.DropFake
+        android:id="@+id/tab_new_msg_label"
+        android:layout_width="28dip"
+        android:layout_height="28dip"
+        android:layout_gravity="center_vertical"
+        android:layout_toRightOf="@+id/position"
+        android:gravity="center"
+        android:textColor="@android:color/white"
+        android:textSize="12sp"
+        android:visibility="gone"
+        />
+</RelativeLayout>

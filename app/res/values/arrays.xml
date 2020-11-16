@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="profession">
+        <item value="A">各类专业，技术人员</item>
+        <item value="B">国家机关，党群组织，企事业单位的负责人</item>
+        <item value="C">办事人员和有关人员</item>
+        <item value="D">商业工作人员</item>
+        <item value="E">服务性工作人员</item>
+        <item value="F">农林牧渔劳动者</item>
+        <item value="G">生产工作，运输工作和部分体力劳动者</item>
+    </string-array>
+
+    <string-array name="memberIds">
+        <item value="896669596">896669596</item>
+        <item value="896669596">896669767</item>
+        <item value="896667297">896667297</item>
+        <item value="896667318">896667318</item>
+        <item value="896669585">896669585</item>
+        <item value="896668917">896668917</item>
+        <item value="896667563">896667563</item>
+        <item value="896667549">896667549</item>
+        <item value="890002152">890002152</item>
+        <item value="890000595">890000595</item>
+    </string-array>
+
+</resources>

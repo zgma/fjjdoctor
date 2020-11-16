@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Gradle: ./uikit/libs/nim-chatroom-7.0.0.jar">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/uikit/libs/nim-chatroom-7.0.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

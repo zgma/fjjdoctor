@@ -1,0 +1,15 @@
+<component name="libraryTable">
+  <library name="Gradle: com.ycjiang:ImagePreview:2.3.5@aar">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/5f387db218c1f43e5dafebe3ba5952a7/jetified-ImagePreview-2.3.5/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/5f387db218c1f43e5dafebe3ba5952a7/jetified-ImagePreview-2.3.5/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/5f387db218c1f43e5dafebe3ba5952a7/jetified-ImagePreview-2.3.5/res" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.ycjiang/ImagePreview/2.3.5/bdd2d9176a12813726cbe033584984e7b92e5f13/ImagePreview-2.3.5-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.ycjiang/ImagePreview/2.3.5/891809a0af8216dfbefe527844dc643441c51f79/ImagePreview-2.3.5-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

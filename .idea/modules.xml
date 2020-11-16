@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/apilibrary/apilibrary.iml" filepath="$PROJECT_DIR$/.idea/modules/apilibrary/apilibrary.iml" group="fjjdoctor/apilibrary" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/app.iml" group="fjjdoctor/app" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/calendarview/calendarview.iml" filepath="$PROJECT_DIR$/.idea/modules/calendarview/calendarview.iml" group="fjjdoctor/calendarview" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/fjjdoctor.iml" filepath="$PROJECT_DIR$/.idea/modules/fjjdoctor.iml" group="fjjdoctor" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/lsettingviewlibrary/lsettingviewlibrary.iml" filepath="$PROJECT_DIR$/.idea/modules/lsettingviewlibrary/lsettingviewlibrary.iml" group="fjjdoctor/lsettingviewlibrary" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/uikit/uikit.iml" filepath="$PROJECT_DIR$/.idea/modules/uikit/uikit.iml" group="fjjdoctor/uikit" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/simplezxing/zxing.iml" filepath="$PROJECT_DIR$/.idea/modules/simplezxing/zxing.iml" group="fjjdoctor/zxing" />
+    </modules>
+  </component>
+</project>

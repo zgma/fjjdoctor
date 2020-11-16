@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <View
+        android:id="@+id/action_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="1dp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.qingeng.fjjdoctor.widget.TopBar
+            android:id="@+id/top_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </com.qingeng.fjjdoctor.widget.TopBar>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/top_bar"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:id="@+id/register_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/common_margin_20"
+                android:layout_marginTop="70dp"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/edit_register_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_login_input"
+                    android:drawablePadding="15dp"
+                    android:hint="@string/register_hint_account"
+                    android:inputType="phone"
+                    android:paddingVertical="10dp"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:textColor="@color/text_color_grey"
+                    android:textCursorDrawable="@null"
+                    android:textSize="15sp" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/bg_login_input"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+
+                    <EditText
+                        android:id="@+id/edit_register_code"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:drawablePadding="15dp"
+                        android:hint="@string/register_hint_code"
+                        android:inputType="number"
+                        android:longClickable="false"
+                        android:paddingVertical="10dp"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="15dp"
+                        android:textCursorDrawable="@null"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/tv_register_send_code"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:text="@string/register_hint_send_code" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/bg_login_input"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+
+                    <EditText
+                        android:id="@+id/edit_register_password"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:drawablePadding="15dp"
+                        android:hint="@string/register_hint_set_password"
+                        android:inputType="numberPassword"
+                        android:longClickable="false"
+                        android:paddingVertical="10dp"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="15dp"
+                        android:textCursorDrawable="@null"
+                        android:textSize="15sp" />
+
+                    <ImageView
+                        android:id="@+id/iv_register_show_password"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:src="@mipmap/password_show" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/bg_login_input"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+
+                    <EditText
+                        android:id="@+id/edit_register_password_re"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:drawablePadding="15dp"
+                        android:hint="@string/register_hint_set_password"
+                        android:inputType="numberPassword"
+                        android:longClickable="false"
+                        android:paddingVertical="10dp"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="15dp"
+                        android:textCursorDrawable="@null"
+                        android:textSize="15sp" />
+
+                    <ImageView
+                        android:id="@+id/iv_register_show_password_re"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:src="@mipmap/password_show" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="@string/register_password_hint"
+                    android:textColor="@color/text_color_grey" />
+
+            </RelativeLayout>
+
+
+            <Button
+                android:id="@+id/btn_register"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/common_button_height"
+                android:layout_below="@+id/login_layout"
+                android:layout_centerHorizontal="true"
+                android:layout_marginHorizontal="@dimen/common_margin_20"
+                android:layout_marginTop="50dp"
+                android:background="@drawable/bg_login_button"
+                android:text="@string/register"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_agreement"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="40dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:id="@+id/cb_agreement"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="我已阅读并同意"
+                android:textColor="@color/grey"
+                android:textSize="12sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:autoLink="all"
+                android:text="肺结节管家用户协议与隐私政策"
+                android:textColor="@color/colorPrimary"
+                android:textSize="12sp"
+                android:textStyle="" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        app:elevation="0dp">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:titleTextAppearance="@style/Toolbar.TitleText">
+
+            <include layout="@layout/nim_action_bar_right_clickable_tv" />
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ScrollView
+        style="@style/scroll_view"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/color_background"
+        android:fillViewport="true"
+        android:scrollbarStyle="outsideOverlay">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:orientation="vertical">
+
+                <include
+                    android:id="@+id/team_upgrade"
+                    layout="@layout/nim_advanced_team_info_divider_item"
+                    android:visibility="gone"
+                    />
+
+                <RelativeLayout
+                    android:id="@+id/layout_team_managers"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:background="@color/white">
+
+                    <TextView
+                        android:id="@+id/title_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="15dp"
+                        android:text="群管理"
+                        android:textColor="@color/grey"
+                        android:textSize="16sp" />
+
+
+                    <com.netease.nim.uikit.common.ui.imageview.HeadImageView
+                        android:id="@+id/team_head_manage_1"
+                        android:layout_width="40dip"
+                        android:layout_height="50dip"
+                        android:layout_toRightOf="@+id/title_1"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="15dp"
+                        />
+
+                    <com.netease.nim.uikit.common.ui.imageview.HeadImageView
+                        android:id="@+id/team_head_manage_2"
+                        android:layout_width="40dip"
+                        android:layout_height="50dip"
+                        android:layout_toRightOf="@+id/team_head_manage_1"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="15dp"
+                        />
+
+
+                    <com.netease.nim.uikit.common.ui.imageview.HeadImageView
+                        android:id="@+id/team_head_manage_3"
+                        android:layout_width="40dip"
+                        android:layout_height="50dip"
+                        android:layout_toRightOf="@+id/team_head_manage_2"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="15dp"
+                        />
+
+
+                    <ImageView
+                        android:id="@+id/arrow_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="15dp"
+                        android:src="@drawable/nim_arrow_right" />
+
+                </RelativeLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/layout_manage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="10dp"
+                    android:orientation="vertical">
+
+                    <include
+                        android:id="@+id/invite_confirm_layout"
+                        layout="@layout/nim_user_profile_toggle_item" />
+
+                    <include
+                        android:id="@+id/p2p_can_layout"
+                        layout="@layout/nim_user_profile_toggle_item" />
+
+                    <include
+                        android:id="@+id/user_can_invite_layout"
+                        layout="@layout/nim_user_profile_toggle_item"
+                        android:visibility="gone"
+                        />
+
+                    <include
+                        android:id="@+id/p_down_notify_layout"
+                        layout="@layout/nim_user_profile_toggle_item"
+                        android:visibility="gone"
+                        />
+
+                    <include
+                        android:id="@+id/announcement_notify_layout"
+                        layout="@layout/nim_user_profile_toggle_item"
+                        android:visibility="gone"
+                        />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp"
+                        android:background="@color/common_bg"
+                        />
+
+                    <include
+                        android:id="@+id/team_queren_layout"
+                        layout="@layout/nim_advanced_team_info_divider_item" />
+
+
+                    <include
+                        android:id="@+id/team_huoyuedu_layout"
+                        layout="@layout/nim_advanced_team_info_divider_item" />
+
+                    <include
+                        android:id="@+id/team_tuiqun_layout"
+                        layout="@layout/nim_advanced_team_info_divider_item" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp"
+                        android:background="@color/common_bg"
+                        />
+
+                    <include
+                        android:id="@+id/team_hongbao_layout"
+                        layout="@layout/nim_advanced_team_info_divider_item" />
+
+                </LinearLayout>
+
+                <include
+                    android:id="@+id/team_transfer_layout"
+                    layout="@layout/nim_advanced_team_info_divider_item" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

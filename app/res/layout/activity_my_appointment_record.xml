@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:leon="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_bg"
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        app:elevation="0dp">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:titleTextAppearance="@style/Toolbar.TitleText">
+
+            <include layout="@layout/nim_action_bar_right_clickable_tv" />
+
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <com.haibin.calendarview.CalendarLayout
+        android:id="@+id/calendarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#fff"
+        android:orientation="vertical"
+        app:calendar_content_view_id="@+id/rcv_list">
+
+        <com.haibin.calendarview.CalendarView
+            android:id="@+id/calendarView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#fff"
+            app:calendar_padding="10dp"
+            app:current_month_lunar_text_color="#CFCFCF"
+            app:current_month_text_color="#333333"
+            app:max_multi_select_size="2"
+            app:max_year="2030"
+            app:min_year="2004"
+            app:month_view="com.qingeng.fjjdoctor.user.appointment.multi.CustomMultiMonthView"
+            app:month_view_show_mode="mode_only_current"
+            app:other_month_lunar_text_color="#e1e1e1"
+            app:other_month_text_color="#e1e1e1"
+            app:scheme_text="假"
+            app:scheme_text_color="#333"
+            app:scheme_theme_color="#128c4b"
+            app:select_mode="multi_mode"
+            app:selected_lunar_text_color="#CFCFCF"
+            app:selected_text_color="#ffffff"
+            app:selected_theme_color="#f17706"
+            app:week_background="#fff"
+            app:week_start_with="sun"
+            app:week_text_color="#111111"
+            app:week_view="com.qingeng.fjjdoctor.user.appointment.multi.CustomMultiWeekView"
+            app:week_view_scrollable="true"
+            app:year_view_day_text_color="#333333"
+            app:year_view_day_text_size="9sp"
+            app:year_view_month_text_color="#ff0000"
+            app:year_view_month_text_size="20sp"
+            app:year_view_scheme_color="#f17706" />
+
+        <!--        <com.scwang.smart.refresh.layout.SmartRefreshLayout
+                    android:id="@+id/refreshLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/common_bg"
+                    app:srlEnablePreviewInEditMode="true">
+
+
+                    <ezy.ui.layout.LoadingLayout
+                        android:id="@+id/loading"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">-->
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rcv_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/common_bg"
+            android:paddingTop="5dp">
+
+        </androidx.recyclerview.widget.RecyclerView>
+        <!--           </ezy.ui.layout.LoadingLayout>
+
+                   <com.scwang.smart.refresh.footer.ClassicsFooter
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content" />
+
+               </com.scwang.smart.refresh.layout.SmartRefreshLayout>-->
+
+    </com.haibin.calendarview.CalendarLayout>
+
+
+    <Button
+        android:id="@+id/btn_set"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_button_height"
+        android:layout_below="@+id/login_layout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginVertical="10dp"
+        android:background="@drawable/bg_comm_button_90"
+        android:text="设置可预约时间"
+        android:textColor="@color/white" />
+
+
+</LinearLayout>

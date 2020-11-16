@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.promeg:tinypinyin:2.0.1@jar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.promeg/tinypinyin/2.0.1/f8995298d4ee8e744cde519449548c47cb3b359e/tinypinyin-2.0.1.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.promeg/tinypinyin/2.0.1/4c6519f5714b8770d0728e2283622e4fe9447ef3/tinypinyin-2.0.1-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.promeg/tinypinyin/2.0.1/b130471911c70661a466eb0395f92f79a7ce2b11/tinypinyin-2.0.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

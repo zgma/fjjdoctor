@@ -1,0 +1,67 @@
+import java.text.SimpleDateFormat
+
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+buildscript {
+
+    apply from: 'script.gradle', to: buildscript
+    repositories {
+        google()
+        mavenCentral()
+        maven {url 'https://maven.google.com'}
+        maven {url 'https://developer.huawei.com/repo/'}
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:4.0.1'
+        classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.7'
+        classpath 'com.github.dcendents:android-maven-gradle-plugin:1.5'
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+        mavenCentral()
+        maven { url 'http://developer.huawei.com/repo' }
+        maven { url "https://jitpack.io" }
+        flatDir {
+            dirs 'libs'
+        }
+
+    }
+
+}
+
+ext {
+    compileSdkVersion = 28
+    buildToolsVersion = '28.0.3'
+    minSdkVersion = 19
+    targetSdkVersion = 28
+    appTargetSdkVersion = 28
+    versionCode = 10035
+    versionName = '1.0.035'
+    sdkSourceCompatibility = 1.8
+    sdkTargetCompatibility = 1.8
+    appSourceCompatibility = 1.8
+    appTargetCompatibility = 1.8
+    nimOutputDir = "nim-outputs-${versionName}-${getBuildTime()}-${getGitVersion()}"
+
+}
+
+static def getGitVersion() {
+    try {
+        return 'git rev-parse --short HEAD'.execute().text.trim()
+    } catch (Throwable th) {
+        th.printStackTrace()
+        return ""
+    }
+}
+
+static def getBuildTime() {
+    Date date = new Date()
+    SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyyMMdd")
+    return simpleDateFormat.format(date)
+}
