@@ -550,6 +550,12 @@
             android:theme="@style/AppTheme.NoActionBar"
             android:windowSoftInputMode="stateHidden|adjustResize" />
         <activity
+            android:name="com.qingeng.fjjdoctor.user.DoctorAuthActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
             android:name="com.qingeng.fjjdoctor.user.MyPhoneActivity"
             android:configChanges="keyboardHidden|orientation"
             android:screenOrientation="portrait"

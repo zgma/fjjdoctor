@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/common_bg"
+    android:background="@color/white"
     android:orientation="vertical">
 
     <View
@@ -77,11 +77,13 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        >
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@color/white"
             android:orientation="vertical">
 
             <LinearLayout
@@ -290,11 +292,15 @@
                 </LinearLayout>
             </LinearLayout>
 
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="@color/common_bg"
+                />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
                 android:background="@color/white"
                 android:orientation="horizontal"
                 android:paddingHorizontal="10dp"
@@ -407,7 +413,7 @@
                     android:contentDescription="@string/empty"
                     android:drawableTop="@drawable/nim_messages_list_empty_bg"
                     android:lineSpacingExtra="@dimen/dp_size_5"
-                    android:text="还没有会话，在通讯录中找个人聊聊吧！" />
+                    android:text="" />
 
             </LinearLayout>
 

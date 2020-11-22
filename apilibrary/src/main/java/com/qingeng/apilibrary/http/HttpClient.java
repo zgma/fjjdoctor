@@ -795,6 +795,10 @@ public class HttpClient {
         request(HttpServiceManager.getInstance().getRetrofit().addNewSurveyModel(baseRequestBean.getBody()), httpInterface, requestCode);
     }
 
+    public static void doctorSubmitAuth(BaseRequestBean baseRequestBean, HttpInterface httpInterface, int requestCode) {
+        request(HttpServiceManager.getInstance().getRetrofit().doctorSubmitAuth(baseRequestBean.getBody()), httpInterface, requestCode);
+    }
+
     public static void delBankCard(int cardId, String userType, HttpInterface httpInterface, int requestCode) {
         request(HttpServiceManager.getInstance().getRetrofit().delBankCard(cardId, userType), httpInterface, requestCode);
     }
@@ -805,6 +809,10 @@ public class HttpClient {
 
     public static void doctorSetSelfOrderTime(BaseRequestBean baseRequestBean, HttpInterface httpInterface, int requestCode) {
         request(HttpServiceManager.getInstance().getRetrofit().doctorSetSelfOrderTime(baseRequestBean.getBody()), httpInterface, requestCode);
+    }
+
+    public static void selectMyPatientOther(BaseRequestBean baseRequestBean, HttpInterface httpInterface, int requestCode) {
+        request(HttpServiceManager.getInstance().getRetrofit().selectMyPatientOther(baseRequestBean.getBody()), httpInterface, requestCode);
     }
 
     public static void getDoctorUploadUrl(BaseRequestBean baseRequestBean, HttpInterface httpInterface, int requestCode) {

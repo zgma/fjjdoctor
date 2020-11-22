@@ -45,7 +45,7 @@ android {
 
     signingConfigs {
         debug {
-            File strFile = new File("D://fastchat/fjjgj.jks")
+            File strFile = new File("E://key/fjjgj.jks")
             storeFile file(strFile)
             storePassword "kbl20200315"
             keyAlias "kbl"
@@ -53,7 +53,7 @@ android {
         }
 
         release {
-            File strFile = new File("D://fastchat/fjjgj.jks")
+            File strFile = new File("E://key/fjjgj.jks")
             storeFile file(strFile)
             storePassword "kbl20200315"
             keyAlias "kbl"
@@ -199,6 +199,9 @@ dependencies {
     implementation  'com.scwang.smart:refresh-footer-classics:2.0.1'    //经典加载
     implementation "com.daimajia.swipelayout:library:1.2.0@aar"
     implementation 'com.github.czy1121:loadinglayout:1.0.1'
+
+    implementation 'org.xutils:xutils:3.3.22'
+    implementation 'org.jsoup:jsoup:1.10.2'
 
 
 }

@@ -2,6 +2,7 @@ package com.qingeng.fjjdoctor.main.fragment;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
@@ -51,9 +52,9 @@ public class ContactListFragment extends MainTabFragment implements View.OnClick
     private ContactsFragment2 fragment;
 
     private TextView unreadNum;
-    private CardView cardAdd;
-    private CardView cardGroup;
-    private CardView cardService;
+    private LinearLayout cardAdd;
+    private LinearLayout cardGroup;
+    private LinearLayout cardService;
     private CardView cardBlackList;
     private ConstraintLayout layout_my_black_list;
 

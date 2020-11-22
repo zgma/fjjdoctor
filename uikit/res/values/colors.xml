@@ -114,7 +114,7 @@
     <color name="main_color">#0091EA</color>
     <color name="upgrade_top_bg">#FACA74</color>
     <color name="common_line">#999999</color>
-    <color name="common_bg">#F0F0F0</color>
+    <color name="common_bg">#F1F1F1</color>
 
     <color name="topbar_backgroup_blue">#0390F3</color>
     <color name="topbar_backgroup_red">#FF4F43</color>

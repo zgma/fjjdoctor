@@ -47,6 +47,7 @@ import com.qingeng.fjjdoctor.DemoCache;
 import com.qingeng.fjjdoctor.R;
 import com.qingeng.fjjdoctor.config.preference.UserPreferences;
 import com.qingeng.fjjdoctor.main.activity.MainActivity;
+import com.qingeng.fjjdoctor.user.DoctorAuthActivity;
 import com.qingeng.fjjdoctor.util.LocalDataUtils;
 import com.qingeng.fjjdoctor.util.RegularUtils;
 import com.qingeng.fjjdoctor.util.UiUtils;
@@ -368,6 +369,7 @@ public class LoginActivity extends UI implements View.OnClickListener, HttpInter
     public void onFailure(int requestCode, String message) {
         if (requestCode == RequestCommandCode.GET_USER_INFO) {
             ToastHelper.showToast(this, "获取医生信息失败");
+            DoctorAuthActivity.start(this);
             return;
         }
         ToastHelper.showToast(this, message);

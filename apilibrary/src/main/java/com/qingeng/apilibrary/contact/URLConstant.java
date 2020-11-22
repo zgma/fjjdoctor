@@ -219,6 +219,12 @@ public class URLConstant {
     public static final String URL_ADD_SURVEY_SUBJECT = "/api/doctor/addSurveySubject";
     public static final String URL_UPDATE_SURVEY_MODEL = "/api/doctor/updateSurveyModel";
     public static final String URL_ADD_SURVEY_MODEL = "/api/doctor/addNewSurveyModel";
+    public static final String URL_SUBMIT_AUTH = "/api/doctor/doctorSubmitAuth";
+
+
+    public static final String URL_SELECT_MY_PATIENT_OTHER = "/api/doctorChat/selectMyPatientOther";
+
+
 
 
     public static final String URL_FILE_UPLOAD = "/common/upload";

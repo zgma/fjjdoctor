@@ -1,6 +1,7 @@
 package com.netease.nim.uikit.common.util.sys;
 
 import java.math.BigDecimal;
+import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -11,7 +12,7 @@ import java.util.TimeZone;
 
 public class TimeUtil {
 
-    public static final String DATAFORMATSTRING_yyyyMMddHHmmss= "yyyy-MM-dd HH:mm:ss";
+    public static final String DATAFORMATSTRING_yyyyMMddHHmmss = "yyyy-MM-dd HH:mm:ss";
 
     public static final int MIN_IN_MS = 60 * 1000;
 
@@ -62,7 +63,8 @@ public class TimeUtil {
 
         return null;
     }
-    public static Date getDateFromFormatString(String formatDate,String  formatString) {
+
+    public static Date getDateFromFormatString(String formatDate, String formatString) {
         SimpleDateFormat sdf = new SimpleDateFormat(formatString);
         try {
             return sdf.parse(formatDate);
@@ -143,47 +145,51 @@ public class TimeUtil {
     }
 
     public static String getTimeShowString(Date date, boolean abbreviate) {
-        String dataString;
-        String timeStringBy24;
+        try {
+            String dataString;
+            String timeStringBy24;
 
-        Date currentTime = date;
-        Date today = new Date();
-        Calendar todayStart = Calendar.getInstance();
-        todayStart.set(Calendar.HOUR_OF_DAY, 0);
-        todayStart.set(Calendar.MINUTE, 0);
-        todayStart.set(Calendar.SECOND, 0);
-        todayStart.set(Calendar.MILLISECOND, 0);
-        Date todaybegin = todayStart.getTime();
-        Date yesterdaybegin = new Date(todaybegin.getTime() - 3600 * 24 * 1000);
-        Date preyesterday = new Date(yesterdaybegin.getTime() - 3600 * 24 * 1000);
+            Date currentTime = date;
+            Date today = new Date();
+            Calendar todayStart = Calendar.getInstance();
+            todayStart.set(Calendar.HOUR_OF_DAY, 0);
+            todayStart.set(Calendar.MINUTE, 0);
+            todayStart.set(Calendar.SECOND, 0);
+            todayStart.set(Calendar.MILLISECOND, 0);
+            Date todaybegin = todayStart.getTime();
+            Date yesterdaybegin = new Date(todaybegin.getTime() - 3600 * 24 * 1000);
+            Date preyesterday = new Date(yesterdaybegin.getTime() - 3600 * 24 * 1000);
 
-        if (!currentTime.before(todaybegin)) {
-            dataString = "今天";
-        } else if (!currentTime.before(yesterdaybegin)) {
-            dataString = "昨天";
-        } else if (!currentTime.before(preyesterday)) {
-            dataString = "前天";
-        } else if (isSameWeekDates(currentTime, today)) {
-            dataString = getWeekOfDate(currentTime);
-        } else {
-            SimpleDateFormat dateformatter = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault());
-            dataString = dateformatter.format(currentTime);
-        }
-
-        SimpleDateFormat timeformatter24 = new SimpleDateFormat("HH:mm", Locale.getDefault());
-        timeStringBy24 = timeformatter24.format(currentTime);
-
-        if (abbreviate) {
             if (!currentTime.before(todaybegin)) {
-                return getTodayTimeBucket(currentTime);
+                dataString = "今天";
+            } else if (!currentTime.before(yesterdaybegin)) {
+                dataString = "昨天";
+            } else if (!currentTime.before(preyesterday)) {
+                dataString = "前天";
+            } else if (isSameWeekDates(currentTime, today)) {
+                dataString = getWeekOfDate(currentTime);
             } else {
-                return dataString;
+                SimpleDateFormat dateformatter = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault());
+                dataString = dateformatter.format(currentTime);
             }
-        } else {
-            return dataString + " " + timeStringBy24;
+
+            SimpleDateFormat timeformatter24 = new SimpleDateFormat("HH:mm", Locale.getDefault());
+            timeStringBy24 = timeformatter24.format(currentTime);
+
+            if (abbreviate) {
+                if (!currentTime.before(todaybegin)) {
+                    return getTodayTimeBucket(currentTime);
+                } else {
+                    return dataString;
+                }
+            } else {
+                return dataString + " " + timeStringBy24;
+            }
+
+        } catch (Exception e) {
+            return "";
         }
     }
-
 
 
     public static String getTimeShowString(long milliseconds, boolean abbreviate) {
@@ -369,4 +375,23 @@ public class TimeUtil {
         }
         return sb.toString();
     }
+
+    public static String dealDateFormat(String oldDateStr) {
+        try {
+            DateFormat df = new SimpleDateFormat("yyyy-MM-dd'T'hh:mm:ss.SSSZ");
+            DateFormat df2 = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+            df2.setTimeZone(TimeZone.getTimeZone("GMT"));
+            Date date = null;
+            try {
+                date = df.parse(oldDateStr);
+            } catch (ParseException e) {
+                e.printStackTrace();
+            }
+            return df2.format(date);
+        } catch (Exception e) {
+            return oldDateStr;
+        }
+
+    }
+
 }

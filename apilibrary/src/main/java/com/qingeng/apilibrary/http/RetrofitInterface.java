@@ -690,11 +690,19 @@ public interface RetrofitInterface {
     Observable<BaseResponseData> addNewSurveyModel(@FieldMap Map<String, Object> map);
 
     //意见反馈
+    @FormUrlEncoded
+    @POST(URLConstant.URL_SUBMIT_AUTH)
+    Observable<BaseResponseData> doctorSubmitAuth(@FieldMap Map<String, Object> map);
+
+    //意见反馈
     @GET(URLConstant.URL_DELETE_BANK_CARD)
     Observable<BaseResponseData> delBankCard(@Query("cardId") int cardId, @Query("userType") String userType);
 
     @GET(URLConstant.URL_DOCTOR_SET_SELF_ORDER_TIME)
     Observable<BaseResponseData> doctorSetSelfOrderTime(@QueryMap Map<String, Object> map);
+
+    @GET(URLConstant.URL_SELECT_MY_PATIENT_OTHER)
+    Observable<BaseResponseData> selectMyPatientOther(@QueryMap Map<String, Object> map);
 
 
     @GET(URLConstant.URL_GET_UPLOAD_URL)
