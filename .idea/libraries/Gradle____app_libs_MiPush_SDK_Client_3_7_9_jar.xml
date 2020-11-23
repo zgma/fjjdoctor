@@ -1,9 +1,0 @@
-<component name="libraryTable">
-  <library name="Gradle: ./app/libs/MiPush_SDK_Client_3_7_9.jar">
-    <CLASSES>
-      <root url="jar://$PROJECT_DIR$/app/libs/MiPush_SDK_Client_3_7_9.jar!/" />
-    </CLASSES>
-    <JAVADOC />
-    <SOURCES />
-  </library>
-</component>

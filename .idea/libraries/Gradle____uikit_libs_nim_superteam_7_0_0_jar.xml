@@ -1,9 +1,0 @@
-<component name="libraryTable">
-  <library name="Gradle: ./uikit/libs/nim-superteam-7.0.0.jar">
-    <CLASSES>
-      <root url="jar://$PROJECT_DIR$/uikit/libs/nim-superteam-7.0.0.jar!/" />
-    </CLASSES>
-    <JAVADOC />
-    <SOURCES />
-  </library>
-</component>
