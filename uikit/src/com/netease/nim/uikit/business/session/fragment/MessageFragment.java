@@ -437,7 +437,7 @@ public class MessageFragment extends TFragment implements ModuleProxy, HttpInter
         List<BaseAction> actions = new ArrayList<>();
         actions.add(new ImageAction());
         actions.add(new VideoAction());
-        actions.add(new LocationAction());
+        //actions.add(new LocationAction());
 /*        actions.add(new CarAction());
         actions.add(new CollectAction());*/
 

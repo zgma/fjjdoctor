@@ -65,7 +65,7 @@ public class SessionTeamCustomization extends SessionCustomization {
         };
         infoButton.iconId = R.drawable.btn_menu_black;
         // optionsButtons.add(cloudMsgButton);
-        optionsButtons.add(infoButton);
+       // optionsButtons.add(infoButton);
 
         buttons = optionsButtons;
         withSticker = true;

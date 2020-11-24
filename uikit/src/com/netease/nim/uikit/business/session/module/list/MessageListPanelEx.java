@@ -942,12 +942,12 @@ public class MessageListPanelEx implements HttpInterface {
             MsgTypeEnum msgType = selectedItem.getMsgType();
 
             MessageAudioControl.getInstance(container.activity).stopAudio();
-
-            longClickItemCollect(selectedItem, alertDialog, msgType);
+            //收藏
+            //longClickItemCollect(selectedItem, alertDialog, msgType);
             // 0 EarPhoneMode
-            longClickItemEarPhoneMode(alertDialog, msgType);
+            //longClickItemEarPhoneMode(alertDialog, msgType);
             // 1 resend
-            longClickItemResend(selectedItem, alertDialog);
+            //longClickItemResend(selectedItem, alertDialog);
             // 2 copy
             longClickItemCopy(selectedItem, alertDialog, msgType);
             // 3 revoke
@@ -957,19 +957,19 @@ public class MessageListPanelEx implements HttpInterface {
             // 4 delete
             longClickItemDelete(selectedItem, alertDialog);
             // 5 trans
-            longClickItemVoidToText(selectedItem, alertDialog, msgType);
+            //longClickItemVoidToText(selectedItem, alertDialog, msgType);
 
             if (!NimUIKitImpl.getMsgForwardFilter().shouldIgnore(selectedItem) && !recordOnly) {
                 // 6 forward to person
-                longClickItemForwardToPerson(selectedItem, alertDialog);
+                //longClickItemForwardToPerson(selectedItem, alertDialog);
                 // 7 forward to team
-                longClickItemForwardToTeam(selectedItem, alertDialog);
+                //longClickItemForwardToTeam(selectedItem, alertDialog);
             }
             // 7 cancel upload attachment
-            longClickItemCancelUpload(selectedItem, alertDialog);
+            //longClickItemCancelUpload(selectedItem, alertDialog);
 
             // 8 multiple selection
-            longClickItemMultipleSelection(selectedItem, alertDialog);
+            //longClickItemMultipleSelection(selectedItem, alertDialog);
         }
 
         private boolean enableRevokeButton(IMMessage selectedItem) {

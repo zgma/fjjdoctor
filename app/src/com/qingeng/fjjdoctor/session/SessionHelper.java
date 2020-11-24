@@ -212,9 +212,9 @@ public class SessionHelper {
             actions.add(new GuessAction());
             actions.add(new FileAction());
             actions.add(new TipAction());
-            actions.add(new CardAction());
+            //actions.add(new CardAction());
 
-            actions.add(new RedPacketAction());
+           // actions.add(new RedPacketAction());
 
             resetP2PActions(actions);
             p2pCustomization.actions = actions;
@@ -283,8 +283,8 @@ public class SessionHelper {
             actions.add(new SnapChatAction());
             actions.add(new GuessAction());
             actions.add(new FileAction());
-            actions.add(new CardAction());
-            actions.add(new RedPacketAction());
+            //actions.add(new CardAction());
+            //actions.add(new RedPacketAction());
 
             resetP2PActions(actions);
             myP2pCustomization.actions = actions;
@@ -547,7 +547,7 @@ public class SessionHelper {
             @Override
             public void onAvatarClicked(Context context, IMMessage message) {
                 // 一般用于打开用户资料页面
-                if (message.getMsgType() == MsgTypeEnum.robot && message.getDirect() == MsgDirectionEnum.In) {
+             /*   if (message.getMsgType() == MsgTypeEnum.robot && message.getDirect() == MsgDirectionEnum.In) {
                     RobotAttachment attachment = (RobotAttachment) message.getAttachment();
                     if (attachment.isRobotSend()) {
                         RobotProfileActivity.start(context, attachment.getFromRobotAccount());
@@ -566,7 +566,7 @@ public class SessionHelper {
                     UserProfileActivity2.start2(context, message.getFromAccount());
                 }else {
                     UserProfileActivity2.start2(context, message.getFromAccount());
-                }
+                }*/
             }
 
             @Override
@@ -731,16 +731,16 @@ public class SessionHelper {
     private static void resetP2PActions(ArrayList<BaseAction> actions){
         actions.clear();
 //        actions.add(new PositionAction());
-        actions.add(new RedPacketAction());
-        actions.add(new TransferAction());
-        actions.add(new CardAction());
+        //actions.add(new RedPacketAction());
+       // actions.add(new TransferAction());
+        //actions.add(new CardAction());
 //        actions.add(new CollectAction());
     }
     private static void resetTeamActions(ArrayList<BaseAction> actions){
         actions.clear();
 //        actions.add(new PositionAction());
-        actions.add(new RedPacketAction());
-        actions.add(new CardAction());
+       // actions.add(new RedPacketAction());
+       // actions.add(new CardAction());
 //        actions.add(new CollectAction());
     }
 }

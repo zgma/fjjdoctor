@@ -377,6 +377,13 @@
             android:theme="@style/AppTheme.NoActionBar"
             android:windowSoftInputMode="adjustResize|stateHidden" />
         <activity
+            android:name="com.qingeng.fjjdoctor.user.appointment.MultipleAppointmentActivity"
+            android:configChanges="orientation"
+            android:label="@string/login"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
             android:name="com.qingeng.fjjdoctor.user.appointment.MyAppointmentRecordActivity"
             android:configChanges="orientation"
             android:label="@string/login"

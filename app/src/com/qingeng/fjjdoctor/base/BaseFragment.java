@@ -9,6 +9,8 @@ import android.view.ViewGroup;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import butterknife.ButterKnife;
+
 
 public abstract class BaseFragment extends Fragment {
 
@@ -29,6 +31,7 @@ public abstract class BaseFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         if (rootView == null) {
             rootView = inflater.inflate(getLayout(), container, false);
+            ButterKnife.bind(this,rootView);
             initView();
             isPrepared = true;
             lazyLoad();

@@ -62,6 +62,7 @@ import com.qingeng.apilibrary.contact.RequestCommandCode;
 import com.qingeng.apilibrary.http.HttpClient;
 import com.qingeng.apilibrary.http.HttpInterface;
 import com.qingeng.fjjdoctor.user.MyCodeActivity;
+import com.qingeng.fjjdoctor.user.appointment.MultipleAppointmentActivity;
 import com.qingeng.fjjdoctor.user.survey.SurveyListActivity;
 import com.qingeng.fjjdoctor.util.ImageFrameUtils;
 import com.qingeng.fjjdoctor.util.UiUtils;
@@ -875,6 +876,7 @@ public class RecentContactsFragment extends TFragment implements HttpInterface, 
                 EducationMainActivity.start(getContext());
                 break;
             case R.id.layout_4:
+                MultipleAppointmentActivity.start(getContext());
                 break;
             case R.id.layout_survey:
                 SurveyListActivity.start(getContext());
